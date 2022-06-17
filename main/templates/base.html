@@ -1,0 +1,115 @@
+
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+
+
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+  
+    <script src="{% static 'jquery.js' %}"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'homepage/bootstrap/css/bootstrap.min.css' %}">
+    
+   <title>Sugarcane Expert</title>
+   
+   <link rel="stylesheet" href="{% static 'homepage/bootstrap/css/bootstrap.min.css' %}">
+   <link rel="stylesheet" href="{% static 'homepage/css.css' %}">
+    
+
+   
+  <style>
+
+   .img {
+    position: relative;
+    float: left;
+    width:  200px;
+    height: 200px;
+    background-position: 100% 100%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+}
+
+
+  body{
+
+  background-image: url( "{% static 'homepage/gray.jpg' %}");
+  background-attachment: fixed;
+  opacity: 0.93;
+  background-repeat: no-repeat;
+  
+  background-size:cover;
+
+  }
+
+</style>
+
+
+
+    {% block head %}
+
+
+
+    {% endblock %}
+
+
+  
+  </head>
+
+
+  <body>
+
+
+
+      <div class="container-fluid">
+
+          <div class="page-header mt-1 mb-1 ml-1 ">
+          <h1>Sugarcane Diagnostic Expert System</h1>   
+          <h6>Power to the farmer</h6>
+                <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #11a124;">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href={% url 'index' %}>Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href={% url 'diagnosis' %}>Diagnose</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href={% url 'about' %}>About</a>
+                </li>
+                <li class="nav-item ml-2">
+                    <a class="nav-link" href={% url 'explore' %}>Explore</a>
+                    </li> 
+                    
+                    <li class="nav-item ml-2">
+                        <a class="nav-link" href={% url 'signup' %}>Signup</a>
+                    </li>
+                    <li class="nav-item ml-">
+                        <a class="nav-link" href={% url 'signin' %}>Signin</a>
+                    </li>
+
+                <li class="nav-item ml-2">
+                  
+                </li>
+ 
+                    </ul>
+                </div>
+            </nav>
+
+            {%block body1%}
+            
+            {%endblock%}
+
+   
+</body>
+</html>

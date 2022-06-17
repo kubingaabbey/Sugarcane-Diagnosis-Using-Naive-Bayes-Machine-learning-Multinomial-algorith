@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+<style>
+
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: small;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: rgb(43, 136, 74);}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+
+
+{% endblock %}
+
+
+{%block body1%}
+    Sugarcane is attacked by a number of diseases, among these
+    the most important diseases are: Sugarcane smut; Ratoon Stunting
+    Disease; Red rot; Pineapple disease; sugarcane rust and Sugarcane
+    mosaic virus disease that this application sought to provide the farmer a mean to diagnose 
+    and offer a solution. Below are the different diseases that attack sugar cane.
+    Click on the link to explore in depth about a particular disease
+
+    <table id="customers"><caption>Sugarcane diseases symptoms and mode of spread</caption><tr><th>Disease</th><th>Symptoms</th><th>Mode of spread</th></tr>
+    <tr><td><a class="nav-link" href={% url 'redrot' %}>Redrot, Colletotrichum falcatum Went</a></td><td>If disease-infected setts are planted they result in 
+        failure of germination or 
+        death of germinated settling. In seedling stage the infected plants show yellowing in leaf and 
+        subsequently plants dry singly or in clump. In highly susceptible varieties mid rib lesions are
+         observed after summer rains. In the later stage the red rot infected canes show dull red to brown
+          shades on the rind/nodal regions and during severe infection pinkish sporulation can be seen on 
+          rind and leaf scars. When the infected canes are split open, the internal cane tissue show red 
+          discoloration with whitish patches. Later, pith cavities are formed with greyish mycelial growth 
+          of the fungal pathogen in it.</td><td>The pathogen primarily spread through infected setts and crop 
+              debris surviving in the soil. The secondary infection occurs through flood water, rain splashes 
+              and irrigation water.</td></tr>
+        
+          <tr><td><a class="nav-link" href={% url 'smut' %}>	Smut, Sporisorium scitamineum (Syd.) M. Piepenbr., M. Stoll & Oberw Syn: (Ustilago scitaminea</a></td><td>In the 
+              smut infected plant whip like structure comprising of central host tissue surrounded by
+               a thin layer of black teliospores covered by a thin silvery white membrane is produced from the 
+               growing tip or lateral buds. During the course of time, the white membrane disintegrates and the 
+               spores are readily dispersed by wind and rain. As the main shoot is affected many side shoots are 
+               produced and in those shoots also whips are produced causing bushy and grassy appearance of clumps 
+               with an abnormally high number of small stalks and whips.</td><td>Primary spread is through infected
+                    setts and secondary infection occurs through wind-blown teliospores disperse from the whip.</td></tr>
+
+                    <tr><td><a class="nav-link" href={% url 'wilt' %}>	Wilt, Fusarium sacchari</a></td><td>The symptom appears on 4-5 months old plant as gradual yellowing 
+                        and drying of leaves and cane. Plants become completely dry and die leaving hollow stalks. In the infected 
+                        cane inter-nodal tissues shrink and boat shaped cavities are formed due to loss of moisture. Internally 
+                        internode tissue turn to dark-purplish or pinkish or reddish brown in colour. The wilt fungi are weak 
+                        soil borne pathogens and
+                         the disease severity is aggravated by certain biotic or abiotic factors.</td><td>
+                            The primary spread is through infected setts, soil borne pathogen inoculum and also infected debris.
+                             The secondary spread occurs through wind, rain and irrigation water.</td></tr>
+                             <tr><td><a class="nav-link" href={% url 'pineapple' %}>Pineapple disease: Ceratocystis paradoxa</a></td><td>The infected sugarcane setts rot and result
+                                  in poor germination and drying of
+                                  young sugarcane shoots at emergence leaving lot of gaps in the field. When split open internodal
+                                   tissues of infected setts appear reddish and pineapple smell noticed due to production of ethyl acetate. 
+                                   Later stages of infection show blackish internodal tissues due to the production of chlamydospores 
+                                   distributed between vascular bundles. Water stagnation after planting or deep planting favour
+                                    incidence and severity of the disease. Matured crop also exhibits the disease symptoms in the
+                                     field. Here also severe water stagnation, lodging of canes and damages by certain biotic or 
+                                     abiotic factors favour the disease expression.</td><td>
+                                Through soil borne conidia and chlamydospores and through irrigation water. </td></tr>
+                                <tr><td><a class="nav-link" href={% url 'rust' %}>		Rust: Common rust- Puccinia melanocephala;
+                                    Orange rust- Puccinia kuehnii</a></td><td>Small, elongated, yellowish spots are noticed on both the sides of the leaf surface. The spots increase in size and turn to reddish to brown/ orange brown to yellow brown and become pustular on the lower surface of the leaves. In case of severe incidence, numerous lesions occur on individual leaves, giving them drying appearance.</td><td>
+                                        Transmission is by wind and rain water splash </td></tr>
+                                        <tr><td>		Leaf scald (LSD):, Xanthomonas albilineans</td><td>The disease exhibits symptoms in two phases: 
+                                          Chronic and Acute phases.
+                                           Very often the disease may remain under latent phase without exhibiting any symptoms. The disease symptoms
+                                            include chlorotic (white) stripes/ blights on leaves (Leaf Scald 1), axillary bud sprouting (Leaf Scald 2) 
+                                            and burnt appearance of the leaf tips. Internally the stalk tissues show vascular discolouration both in the 
+                                            nodes and internodes (Leaf Scald 3). Under Indian conditions we do not get typical
+                                           white (pencil-line) stripes on leaves along the veins; instead we see typical bacterial blights</td><td>
+                                            Infected cuttings and mechanical transmission through cutting implements / knives </td></tr>
+                                          <tr><td><a class="nav-link" href={% url 'pokkah' %}>	Pokkah boeng / Top rot: Fusarium sacchari/ F. proliferatum
+                                             spp.
+                                              Orange rust- Puccinia kuehnii</a></td><td>In the pokkah boeng phase, the disease exhibits characteristic 
+                                                twisted top in affected canes with different types of leaf malformation. In the top rot phase, the disease 
+                                                is characterized by rotting of spindle leaf. Most of the pokkah boeng infected canes generally recover from
+                                                 the symptoms, but top rot phase never recover from the damage. In the acute phase wilting of plant is
+                                                  noticed, which is characterized by yellowing and drying of leaves and stalks.</td><td>
+                                                Primary spread is through infected seed cane and left over infected debris. The secondary spread is through
+                                                 wind, rain and irrigation water. </td></tr>
+
+                                                <tr><td>	<a class="nav-link" href={% url 'pineapple' %}>Pineapple disease: Ceratocystis paradoxa</a></td><td>The infected sugarcane setts rot and result
+                                            in poor germination and drying of
+                                            young sugarcane shoots at emergence leaving lot of gaps in the field. When split open internodal
+                                             tissues of infected setts appear reddish and pineapple smell noticed due to production of ethyl acetate. 
+                                             Later stages of infection show blackish internodal tissues due to the production of chlamydospores 
+                                             distributed between vascular bundles. Water stagnation after planting or deep planting favour
+                                              incidence and severity of the disease. Matured crop also exhibits the disease symptoms in the
+                                               field. Here also severe water stagnation, lodging of canes and damages by certain biotic or 
+                                               abiotic factors favour the disease expression.</td><td>
+                                          Through soil borne conidia and chlamydospores and through irrigation water. </td></tr>
+                                          <tr><td><a class="nav-link" href={% url 'ratoon' %}>	Ratoon stunting disease (RSD): Leifsonia (Clavibacter) Xyli subsp. Xyli</a></td><td>The infected canes 
+                                              become thin and produce shorter stalks and reduction in number of stalks. The disease is aggravated by 
+                                              abiotic stress like water logging and drought. The internal vascular bundles become yellow to reddish with 
+                                              brown dots, commas or short lines at nodal region.</td><td>
+                                            Infected cuttings and mechanical transmission through cutting implements / knives </td></tr>
+                                            <tr><td>	<a class="nav-link" href={% url 'pokkah' %}>	Leaf scald (LSD):, Xanthomonas albilineans</a></td><td>The disease exhibits symptoms in two phases: Chronic and Acute phases. Very often the disease may remain under latent phase without exhibiting any symptoms. The disease symptoms include chlorotic (white) stripes/ blights on leaves (Leaf Scald 1), axillary bud sprouting (Leaf Scald 2) and burnt appearance of the leaf tips. Internally the stalk tissues show vascular discolouration both in the nodes and internodes (Leaf Scald 3). Under Indian conditions we do not get typical white (pencil-line) stripes on leaves along the veins; instead we see typical bacterial blights</td><td>
+                                                Infected cuttings and mechanical transmission through cutting implements / knives. </td></tr>
+                                                <tr><td>	Ratoon stunting disease (RSD): Leifsonia (Clavibacter) Xyli subsp. Xyli</td><td>The infected canes 
+                                                    become thin and produce shorter stalks and reduction in number of stalks. The disease is aggravated by 
+                                                    abiotic stress like water logging and drought. The internal vascular bundles become yellow to reddish with 
+                                                    brown dots, commas or short lines at nodal region.</td><td>
+                                                  Infected cuttings and mechanical transmission through cutting implements / knives </td></tr>
+                                                  <tr><td>		Red stripe:</td><td>The disease is caused by bacterium Acidovorax avenae subsp. avenae (Xanthomonas rubrilineans). It is most common in the subtropical region and appears from May and lasts upto November. Affected leaves show parallel red streaks, more prominently on the proximal region of the lamina (Red stripe 1). In severe infections lead to top rot phase of the disease (Red stripe 2) in which the meristem is killed and exhibiting dried spindle and bud sprouting in basipetal manner.</td><td>
+                                                      Infected cuttings and mechanical transmission through cutting implements / knives. </td></tr>
+            </table>
+
+
+<div class="col" >
+    <div class="row">
+ 
+    <a id="links" class="btn btn-outline-info btn-block" href="">check disease </a><br>
+    </div>
+     
+    <div class="row">
+     <a class="btn btn-outline-info btn-block" href="">view consulation history</a><br>
+     </div>
+
+    <div class="row">
+     <button class="btn btn-outline-info btn-block" data-toggle="modal" data-target="#myModal-feedback">Give feedbacks </button><br>
+     </div></div>
+
+{%endblock%}
